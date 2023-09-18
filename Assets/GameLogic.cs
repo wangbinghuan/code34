@@ -9,6 +9,8 @@ public class GameLogic : MonoBehaviour
     public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
+    public int highScore;
+    public Text highScoreText;
 
 
     [ContextMenu("Increase Score")]
@@ -26,6 +28,12 @@ public class GameLogic : MonoBehaviour
     public void gameOver()
     {
         gameOverScreen.SetActive(true);
+        if (playerScore > highScore)
+        {
+            highScore = playerScore;
+            PlayerPrefs.SetInt("highScore", highScore);
+            highScoreText.text = "High Score:" + highScore.ToString();
+        }
 
     }
 }

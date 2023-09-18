@@ -14,6 +14,8 @@ public class BirdScript : MonoBehaviour
     {
         //gameObject.name = "WangBird";
         logic = GameObject.FindGameObjectsWithTag("logic")[0].GetComponent<GameLogic>();
+        int loadedScore = PlayerPrefs.GetInt("highScore");
+        logic.highScoreText.text = "High Score:" + loadedScore;
 
     }
 

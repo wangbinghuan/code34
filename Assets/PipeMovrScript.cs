@@ -7,8 +7,6 @@ public class PipeMovrScript : MonoBehaviour
 
     public float moveSpeed = 5;
     public float timeTilDeath = 10;
-    private float timer = 0;
-
     public float deadZone = -45;
 
     // Start is called before the first frame update
